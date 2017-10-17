@@ -6,34 +6,91 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NUAC Web App</title>
     <link rel="stylesheet" href="/css/app.css">
+    <style>
+        .page, #slideshow{
+            height: 100vh;
+            background: gray;
+        }
+    </style>
 </head>
 <body>
     <!-- Loading animation -->
         <div class="loader">
             <div class="loader-text">Loading Like...</div>
             <div class="progress">
-                <div class="progress-bar progress-bar-danger progress-bar-striped 
-                active" role="progressbar" style="width:100%"></div>
+                <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width:100%">
+                </div>
             </div>
-        </div>   
+        </div>
+    
+        <!--facebook plugin SDK-->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+         <!--facebook plugin SDK-->
          
     <header>
-        <nav></nav>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#slideshow"><h1>Wisdom<span class="subhead">Pet Meds</span></h1></a>
+                </div> <!--navber-header-->
+                <div class="collapse navbar-collapse" id="collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a <href="#slideshow">Home</a></li>
+                        <li><a href="#adoption">Adoption</a></li>
+                        <li><a href="#appointments">Appointments</a></li>
+                        <li><a href="#calendar">Calendar</a></li>
+                    </ul>
+                </div> <!--navbar-collapse-->
+            </div> <!--navbar container-->
+            
+
+
+        </nav>
     </header>
-    <div id="slideshow-content"></div>
+    <div id="slideshow"></div>
     <main>
         <div class="page" id="adoption">
-            <div class="container">
+            <div class="container" align="center">
                 <h2 class="page-headline">Adoptions</h2>
                 <p>Insert text of appropriate here and in headline</p>
+                <!--Facebook Plugin-->
+                <div class="fb-page" data-href="https://www.facebook.com/napierarchery/" data-tabs="timeline, events, messages" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/napierarchery/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/napierarchery/">Napier University Archery Club</a></blockquote>
+                </div>
             </div><!-- Cont -->
         </div><!-- adoption -->
         <div class="page" id=appointments>
-            <div class="container">
+            <div class="container" align="center">
                 <h2 class="page-headline">Adoptions</h2>
                     <p>Insert text of appropriate here and in headline</p> 
+                    <!--Facebook Messages-->
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnapierarchery%2F&tabs=messages&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </div><!-- Cont -->
         </div><!-- appointments -->
+        <div class="page" id=calendar>
+                <div class="container" align="center">
+                    <h2 class="page-headline">Calendar</h2>
+                        <p>Insert text of appropriate here and in headline</p> 
+                        <!--NUAC Public Calendar iFrame-->
+                        <iframe src="https://calendar.google.com/calendar/embed?title=Napier%20University%20Archery%20Calendar&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff6666&amp;src=vdka0541c7933sjv2bj4akvr4o%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FLondon" style="border-width:0" width=100% height="500" frameborder="0" scrolling="no"></iframe>
+                    </div><!-- Cont -->
+            </div><!-- appointments -->
+
+
+
+
+       
     </main> 
     
 <script src="js/app.js"></script>    
