@@ -202,6 +202,11 @@ header .inbody .navbar-brand span.subhead {
   background-color: #8AC8E1;
 }
 
+/**
+#find-us {
+  background-color: #e6e6e6;
+}
+**/
 #adoption .page-headline {
   color: hsl(202, 45%, 37%);
 }
@@ -212,7 +217,7 @@ header .inbody .navbar-brand span.subhead {
   cursor: pointer;
 }
 
-#appointments {
+#appointments, #find-us {
   line-height:100%;
   background: hsl(38, 24%, 87%);
 }
