@@ -1,3 +1,4 @@
+/*global jQuery*/
 var $ = jQuery = require('jquery');
 require('./bootstrap_custom.js');
 var Handlebars = require('handlebars');
@@ -5,7 +6,7 @@ var Handlebars = require('handlebars');
 $(function(){
     var topoffset = 50;
 
-    $.getJSON('/data/data.json', function(data){
+    $.getJSON('app/data/data.json', function(data){
         var slideshowTemplate = $('#slideshow-template').html();
         var slideshowScript = Handlebars.compile(slideshowTemplate);
 
