@@ -4,7 +4,27 @@ var Handlebars = require('handlebars');
 
 $(function(){
     var topoffset = 50;
-    $('.loader').fadeOut(2000);
+
+    $.getJSON('/data/data.json', function(data){
+        var slideshowTemplate = $('#slideshow-template').html();
+        var slideshowScript = Handlebars.compile(slideshowTemplate);
+
+        $('.loader').fadeOut(1000);
+        $('#slideshow-content').append(slideshowScript(data));
+
+        //replace image in carosel with background image to make full screen size
+        $('#slideshow .item img').each(function(){
+            var imgSrc = $(this).attr('src');
+            $(this).parent().css({'background-image': 'url(' + imgSrc + ')'});
+            $(this).remove();
+        });
+    });
+
+
+    //Activate Carosel
+    $('.carosel').carosel({
+        pause: false
+    });
 
 
     $('.navbar-fixed-top').on('activate.bs.scrollspy', function(){

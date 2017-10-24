@@ -1,0 +1,8 @@
+{
+    "slideshow":
+    [
+        {"image": "image1", "filename": "1"},
+        {"image": "image2", "filename": "2"},
+        {"image": "image3", "filename": "3"}
+    ]
+}
