@@ -56,7 +56,7 @@ header .navbar-default .navbar-nav .active a:hover {
 /**  Navbar Brand **/
 
 header .navbar-brand {
-  background: url(../images/icons/logo.png);
+  background: url(../images/wisdompetlogo.svg);
   background-repeat: no-repeat;
   background-position: 15px 0;
   height: auto;
@@ -72,7 +72,6 @@ header .navbar-brand h1 {
 
 header .navbar-brand span.subhead {
   display: block;
-  font-family: "Roboto Slab", serif;
   font-size: .6em;
   font-weight: 300;
 }
@@ -198,15 +197,10 @@ header .inbody .navbar-brand span.subhead {
     padding-left: 5px;
 }
 
-#adoption, #calendar {
+#adoption, #find-us {
   background-color: #8AC8E1;
 }
 
-/**
-#find-us {
-  background-color: #e6e6e6;
-}
-**/
 #adoption .page-headline {
   color: hsl(202, 45%, 37%);
 }
@@ -217,7 +211,7 @@ header .inbody .navbar-brand span.subhead {
   cursor: pointer;
 }
 
-#appointments, #find-us {
+#appointments {
   line-height:100%;
   background: hsl(38, 24%, 87%);
 }
@@ -331,4 +325,29 @@ header .inbody .navbar-brand span.subhead {
 .progress {
   width: 40%;
   max-width: 200px;
+}
+
+.reloadbtn {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.reloadbtn-lg {
+  width: 50px;
+  height: 50px;
+  display: none;
+  float: right;
+  padding: 9px 10px 9px 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .reloadbtn {
+    display: none;
+  }
+
+  .reloadbtn-lg {
+    display:inline;
+  }
 }
