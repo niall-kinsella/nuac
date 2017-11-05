@@ -7,12 +7,12 @@
     <title>Edinburgh Napier Archery</title>
     <link rel="icon" type="image" href="images/nuac-logo.png"/>
     <link rel="stylesheet" href="css/app.css">
-    <style>
+   <!-- <style>
         .page, #slideshow{
             height: 650px;
             background: gray;
         }
-    </style>
+    </style> -->
 </head>
 <body>
 <!-- Loading animation -->
@@ -77,13 +77,40 @@
       
     <main>
         <div class="page" id="adoption">
-            <div class="container" align="center">
+            <div class="container">
                 <h2 class="page-headline">Adoptions</h2>
                 <p>Insert text of appropriate here and in headline</p>
-                <!--Facebook Plugin-->
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnapierarchery%2F&tabs=timeline%2C%20events&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-            </div><!-- Cont -->
-        </div><!-- adoption -->
+                    <script id="adoption-template" type="text/handlesbars-template">
+                        {{#each adoption}}
+                            <div class="col-md-2 col-sm-3 col-xs-4 openpetmodal" data-toggle="modal" data-target="#adoption{{filename}}">
+                                <img class="img-circle" src="images/photos/{{filename}}.jpg" alt="{{image}} photo">
+                            </div>  <!-- Column -->  
+                            <div class="modal fade" id="adoption{{filename}}" tabindex="-1" role="dialog" aria-labelledby="petModal">
+                                <div class="modal-dialog" data-dismiss="modal" aria-label="Close" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" arial-label="Close" role="document">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h2 class="modal-title modal-petname">{{image}}</h2>
+                                            <div class="modal-petbreed">{{filename}}</div>
+                                        </div> <!-- Modal Header -->
+                                        
+                                        <div class="modal-body">
+                                            <img class="img-responsive modal-petimage" src="images/photos/{{filename}}.jpg" alt="{{image}} photo"/>
+                                        </div> <!-- Modal Body -->   
+                                    </div> <!-- Modal Content -->
+                                </div> <!-- Modal Dialog -->
+                            </div> <!-- Modal fade -->                       
+                        {{/each}}       
+                    </script>
+                <div id="adoption-content"></div>
+        
+                <div class="container" align="center">   
+                    <!-- Facebook Plugin-->
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnapierarchery%2F&tabs=timeline%2C%20events&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div><!-- Cont -->
+            </div><!-- adoption -->
         
         <div class="page" id=appointments>
             <div class="container" align="center">

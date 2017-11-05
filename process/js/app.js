@@ -9,8 +9,15 @@ $(function(){
         var slideshowTemplate = $('#slideshow-template').html();
         var slideshowScript = Handlebars.compile(slideshowTemplate);
 
+
+        var adoptionTemplate = $('#adoption-template').html();
+        var adoptionScript = Handlebars.compile(adoptionTemplate);
+
+
         $('.loader').fadeOut(1000);
         $('#slideshow-content').append(slideshowScript(data));
+        $('#adoption-content').append(adoptionScript(data));
+
 
         //replace image in carosel with background image to make full screen size
         $('#slideshow .item img').each(function(){

@@ -4,5 +4,13 @@
         {"image": "image1", "filename": "1"},
         {"image": "image2", "filename": "2"},
         {"image": "image3", "filename": "3"}
+    ],
+
+
+    "adoption":
+    [
+        {"image": "image0", "filename": "Untitled0"},    
+        {"image": "image1", "filename": "Untitled1"},
+        {"image": "image2", "filename": "Untitled2"}
     ]
 }
